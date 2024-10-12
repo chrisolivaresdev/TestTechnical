@@ -1,0 +1,53 @@
+<div>
+
+    <div class="mb-2 d-flex justify-content-end mt-2" style="width: 90%;">
+      <button mat-raised-button color="primary" (click)="addProduct()">Add Product</button>
+    </div>
+
+
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="dataSource" matSort>
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="typeElaboration">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Type Elaboration </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.typeElaboration}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let element" class="actions-cell">
+          <mat-icon matTooltip="Edit" class="icon-spacing" (click)="editProduct(element.id)">edit</mat-icon>
+          <mat-icon matTooltip="Changes status" class="icon-spacing" (click)="changeStatus(element.id)">settings</mat-icon>
+          <mat-icon matTooltip="Delete" class="icon-spacing" (click)="deleteItem(element.id)">delete</mat-icon>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator
+    paginator
+    [length]="10"
+    [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons></mat-paginator>
+
+
+  </div>
+</div>
+

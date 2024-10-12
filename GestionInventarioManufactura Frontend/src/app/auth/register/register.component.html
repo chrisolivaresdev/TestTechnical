@@ -1,0 +1,44 @@
+<div class="container d-flex flex-column justify-content-center align-items-center gap-2 animate__animated animate__fadeInLeft" style="height: 90vh;">
+  <h4 class="title"> Register </h4>
+
+  <form class="col-4 d-flex flex-column gap-2" [formGroup]="registerForm" (ngSubmit)="register()" >
+    <input type="text" class="form-control" placeholder="Name" formControlName="name" [ngClass]="{ 'invalid':
+    registerForm.controls['name'].invalid &&
+    registerForm.controls['name'].touched &&
+    registerForm.controls['name'].errors}">
+
+    <div *ngIf="
+    registerForm.controls['name'].invalid &&
+    registerForm.controls['name'].touched &&
+    registerForm.controls['name'].errors" style="color:red">
+    required
+    </div>
+    <input type="text" class="form-control" placeholder="Email" formControlName="email" [ngClass]="{ 'invalid':
+    registerForm.controls['email'].invalid &&
+    registerForm.controls['email'].touched &&
+    registerForm.controls['email'].errors}">
+
+    <div *ngIf="
+    registerForm.controls['email'].invalid &&
+    registerForm.controls['email'].touched &&
+    registerForm.controls['email'].errors" style="color:red">
+    required
+    </div>
+    <input type="password" class="form-control" placeholder="Password" formControlName="password" [ngClass]="{ 'invalid':
+    registerForm.controls['password'].invalid &&
+    registerForm.controls['password'].touched &&
+    registerForm.controls['password'].errors}">
+
+    <div *ngIf="
+    registerForm.controls['password'].invalid &&
+    registerForm.controls['password'].touched &&
+    registerForm.controls['password'].errors" style="color:red">
+    required
+    </div>
+
+    <button type="submit" class="btn" [disabled]='registerForm.invalid' [ngClass]="{'btn-danger': registerForm.invalid, 'btn-primary' : registerForm.valid}">Register</button>
+  </form>
+  <span class="link-action" (click)="login()">Sign in</span>
+
+
+</div>

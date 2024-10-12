@@ -1,0 +1,32 @@
+.mat-elevation-z8 {
+  width: 80%; /* Puedes ajustar este valor según necesites */
+  margin: 20px auto; /* Centrar la tabla */
+}
+
+.mat-column-position {
+  width: 10%; /* Ajusta el ancho de la columna */
+}
+
+.mat-column-name {
+  width: 30%;
+}
+
+.mat-column-weight {
+  width: 20%;
+}
+
+.mat-column-symbol {
+  width: 20%;
+}
+
+.actions-cell .icon-spacing {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
