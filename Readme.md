@@ -20,7 +20,7 @@
 
 ### 1. Conéctate al servidor de base de datos
 
-1. Abre SQL Server Management Studio (SSMS) u otro cliente de BD que estés utilizando
+1. Abre SQL Server Management Studio (SSMS)
 
 2. Inicia sesión en el servidor de base de datos
 
