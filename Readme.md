@@ -14,7 +14,7 @@
      npm install -g @angular/cli
      ```
 
-4. **Instalar SQL Server** (o cualquier otro servidor de base de datos que estés usando).
+4. **Instalar SQL Server**.
 
 ## Paso a Paso para Levantar la Aplicación
 
